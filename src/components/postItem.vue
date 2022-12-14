@@ -5,7 +5,7 @@
             <div><strong>Post body:</strong>{{ post.body}}</div>
         </div>
         <div class="post_btns">
-            <my-button>Delete</my-button>
+            <my-button @click="$emit('remove', post)">Delete</my-button>
         </div>
     </div>
 </template>
@@ -27,7 +27,6 @@ export default {
     border: 2px solid black;
     margin-top: 15px;
     display: flex;
-    text-align: center;
     justify-content: space-between;
 }
 </style>
